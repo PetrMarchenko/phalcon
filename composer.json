@@ -1,0 +1,8 @@
+{
+  "require": {
+    "php": ">=7.0",
+    "ext-phalcon": "*",
+    "phalcon/devtools": "~3.0",
+    "swiftmailer/swiftmailer": "5.*"
+  }
+}

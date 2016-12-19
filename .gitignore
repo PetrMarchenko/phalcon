@@ -1,0 +1,31 @@
+# phpstorm project files
+.idea
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# vagrant files
+.vagrant
+
+vm_build.log
+/config/mailer.php
+
+set-github-oauth-token.sh
+
+# cache dir
+/app/cache
+
+# logs dir
+/app/logs
+
+# phalcon-devtools
+/phalcon-devtools
+
+#
+/.phalcon/migration-version
