@@ -236,6 +236,38 @@ class ResourcesMigration_101 extends Migration
                 "action"
             ]
         );
+
+        self::$_connection->insert(
+            "resources",
+            [
+                10,
+                1,
+                "home/error",
+                "default"
+            ],
+            [
+                "id",
+                "role_id",
+                "key",
+                "action"
+            ]
+        );
+
+        self::$_connection->insert(
+            "resources",
+            [
+                11,
+                1,
+                "home/error",
+                "error"
+            ],
+            [
+                "id",
+                "role_id",
+                "key",
+                "action"
+            ]
+        );
     }
 
     /**

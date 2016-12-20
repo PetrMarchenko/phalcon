@@ -28,8 +28,8 @@ class Permissions extends Plugin
 
         $acl = new AclList();
         $acl->setDefaultAction(
-//            Acl::DENY
-            Acl::ALLOW
+            Acl::DENY
+//            Acl::ALLOW
         );
 
         $roles = Roles::find();

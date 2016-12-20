@@ -109,10 +109,31 @@ class MailTemplatesMigration_102 extends Migration
             [
                 1,
                 'REGISTRATION',
-                'REGISTRATION',
-                "registration",
-                "Hi, {{name}}.Go to {{link}}"
+                'Registration confirmation',
+                "Confirm registration",
+                '<p>Hello, {{name}}!</p>'
+                . '<p>Thank you for registration! To activate your account, click here please {{link}}.</p>'
+                . '<p>After confirmation you will be automatically logged in.</p>'
 
+            ],
+            [
+                "id",
+                "key",
+                "subject",
+                "name",
+                "body"
+            ]
+        );
+
+        self::$_connection->insert(
+            "mail_templates",
+            [
+                2,
+                'CHANGE_PASSWORD',
+                'Password recovery',
+                "Password recovery",
+                '<p>Hello, {{name}}!</p>'
+                . '<p>To change your password, you new password is {{password}}.</p>'
             ],
             [
                 "id",
