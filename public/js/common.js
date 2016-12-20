@@ -3,8 +3,9 @@ requirejs.config({
         'jquery': 'lib/jquery-1.11.1.min',
         'jqueryui': 'lib/jquery-ui.min',
         'fuelux': '/../fuelux',
-        'bootstrap': '/bootstrap/js/bootstrap',
-        'datetimepicker': 'lib/jquery-ui-timepicker-addon'
+        'bootstrap': '/../bootstrap/js/bootstrap',
+        'datetimepicker': 'lib/jquery-ui-timepicker-addon',
+        'ckeditor': '/../ckeditor/ckeditor'
     },
     baseUrl: '/js'
 });

@@ -239,7 +239,7 @@ class LoginController extends ControllerBase
                     /**
                      * @var MailTemplates $templates
                      */
-                    $templates = MailTemplates::findFirstByKey('REGISTRATION');
+                    $templates = MailTemplates::findFirstByKey('CHANGE_PASSWORD');
                     if (!$templates) {
                         throw new SharkServerErrorException('\'This template do not found.\'');
                     }

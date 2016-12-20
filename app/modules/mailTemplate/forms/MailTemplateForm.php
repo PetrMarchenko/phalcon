@@ -57,7 +57,8 @@ class MailTemplateForm extends Form
             "body",
             [
                 'class' => "form-control input-md",
-                'placeholder' => "name"
+                'placeholder' => "name",
+                'id' => 'mail_templates_text_area'
             ]
         );
         $body->setLabel('Body');

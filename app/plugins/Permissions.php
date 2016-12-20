@@ -82,11 +82,12 @@ class Permissions extends Plugin
             $userRole = $user->usersRoles->roleId;
         }
 
-        $view = \Phalcon\DI::getDefault()->getShared('view');
-        $view->userRoleId = $userRole;
-
         $resource = $module . '/' . $controller;
         $action = $dispatcher->getActionName();
+
+        $view = \Phalcon\DI::getDefault()->getShared('view');
+        $view->userRoleId = $userRole;
+        $view->resource = $resource;
 
         $allowed = false;
         if($acl->isResource($resource)) {
