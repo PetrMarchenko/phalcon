@@ -5,10 +5,10 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="{{ url(["for": "home"]) }}">Home</a></li>
-        <li><a href="{{ url(["for": "about"]) }}">About</a></li>
-        <li><a href="{{ url(["for": "contact"]) }}">Contact</a></li>
-        {% if (userRoleId == ROLE_ADMIN) %}
+        <li class="{{isActive("home/index/index")}}" ><a href="{{ url(["for": "home"]) }}">Home</a></li>
+        <li class="{{isActive("home/index/about")}}" ><a href="{{ url(["for": "about"]) }}">About</a></li>
+        <li class="{{isActive("home/index/contact")}}" ><a href="{{ url(["for": "contact"]) }}">Contact</a></li>
+        {% if (sharkUserRoleId == ROLE_ADMIN) %}
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Management <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -21,7 +21,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        {% if (userRoleId === ROLE_GUESTS) %}
+        {% if (sharkUserRoleId === ROLE_GUESTS) %}
             <li><a href="{{ url(["for": "login"]) }}">Login</a></li>
             <li><a href="{{ url(["for": "login_registration"]) }}">Registration</a></li>
         {% else %}

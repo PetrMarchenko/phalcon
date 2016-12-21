@@ -86,8 +86,8 @@ class Permissions extends Plugin
         $action = $dispatcher->getActionName();
 
         $view = \Phalcon\DI::getDefault()->getShared('view');
-        $view->userRoleId = $userRole;
-        $view->resource = $resource;
+        $view->sharkUserRoleId = $userRole;
+        //$view->sharkResource = $resource;
 
         $allowed = false;
         if($acl->isResource($resource)) {

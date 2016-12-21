@@ -181,10 +181,13 @@ class Application extends \Phalcon\Mvc\Application
             $volt->getCompiler()->addFunction('number_or_dash', function ($args) {
                 return '(0.00 == ' . $args . ') ? "-" : ' . $args;
             });
-//            $volt->getCompiler()->addFunction('data_path', function () {
-//                return '$this->getDI()->getShared("dispatcher")->getModuleName() . "/" .$this->getView()->getControllerName() . "/" . $this->getView()->getActionName()';
-//            });
 
+            $volt->getCompiler()->addFunction('isActive', function ($value) use ($di)  {
+                $resource = $di->getShared("dispatcher")->getModuleName() . "/"
+                    . $di->getShared("dispatcher")->getControllerName() . "/"
+                    . $di->getShared("dispatcher")->getActionName();
+                return ($resource == substr($value, 1, -1)) ? 'active' : "false";
+            });
 
             return $volt;
         });
