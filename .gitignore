@@ -29,3 +29,5 @@ set-github-oauth-token.sh
 
 #
 /.phalcon/migration-version
+
+tests/_output/*
