@@ -26,7 +26,7 @@ abstract class AbstractGrid
 
     protected $isExportCsv = false;
 
-    const EXPORT_LIMIT = 10000;
+    const EXPORT_LIMIT = 1000;
 
 
     public function initRow()
