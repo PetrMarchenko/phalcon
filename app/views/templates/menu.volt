@@ -15,6 +15,7 @@
                   <li><a href="{{ url(["for": "user_show"]) }}">User</a></li>
                   <li><a href="{{ url(["for": "rbac_show"]) }}">Rbac</a></li>
                   <li><a href="{{ url(["for": "mail_template_show"]) }}">Mail Template</a></li>
+                  <li><a href="{{ url(["for": "setting_show"]) }}">Setting</a></li>
                 </ul>
             </li>
         {% endif%}

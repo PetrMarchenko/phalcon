@@ -19,7 +19,8 @@ class Application extends \Phalcon\Mvc\Application
         'home',
         'rbac',
         'user',
-        'mailTemplate'
+        'mailTemplate',
+        'setting'
     ];
 
     public function registerAutoloaders()
