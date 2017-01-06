@@ -49,8 +49,8 @@ echo vagrant | sudo -S sed -i '$ a\zend_extension=/usr/lib/php/20151012/xdebug.s
 echo vagrant | sudo -S sed -i '$ a\xdebug.remote_enable=1' /etc/php/7.0/fpm/php.ini
 echo vagrant | sudo -S sed -i '$ a\xdebug.remote_connect_back=1' /etc/php/7.0/fpm/php.ini
 
-#echo "Installing php-mbstring"
-#echo vagrant | sudo apt-get install php-mbstring -y
+echo "Installing php-mbstring"
+echo vagrant | sudo apt-get install php-mbstring -y
 
 echo "Installing phalcon"
 echo vagrant | sudo -S curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | sudo bash > /dev/null 2>&1
